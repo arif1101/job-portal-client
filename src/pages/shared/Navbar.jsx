@@ -17,9 +17,9 @@ const Navbar = () => {
     }
 
     const links = <>
-        <NavLink ><li to='/' className='bg-white'>Home</li></NavLink>
-        <NavLink ><li to='/' className='bg-white'>Home</li></NavLink>
-        <NavLink ><li to='/' className='bg-white'>Home</li></NavLink>
+        <NavLink ><li to='/' className='bg-white border px-2 rounded-full flex items-center shadow py-2'>Home</li></NavLink>
+        <NavLink to='/myApplications' ><li  className='bg-white border px-2 rounded-full flex items-center shadow py-2'>My Application</li></NavLink>
+        <NavLink ><li to='/' className='bg-white border px-2 rounded-full flex items-center shadow py-2'>Home</li></NavLink>
 
     </>
     
@@ -48,12 +48,12 @@ const Navbar = () => {
             </ul>
             </div>
             <div className='flex gap-3'>
-            <img className=' w-[32px] h-[32px]' src="./src/assets/image/job.png" alt="" />
+            <img className=' w-[32px] h-[32px]' src="../src/assets/image/job.png" alt="" />
             <p className="text-2xl text-green-800"><span className='text-red-600 font-bold'>J</span>ob<span className='text-red-600 font-bold'>P</span>ortal</p>
             </div>
         </div>
         <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal px-1">
+            <ul className="menu menu-horizontal px-1 flex gap-4 text-xl font-semibold">
                 {links}
             </ul>
         </div>

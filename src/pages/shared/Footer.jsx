@@ -4,7 +4,7 @@ const Footer = () => {
     return (
     <footer className="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
     <aside>
-    <img className=' w-[80px] h-[80px]' src="./src/assets/image/job.png" alt="" />
+    <img className=' w-[80px] h-[80px]' src="../src/assets/image/job.png" alt="" />
         <p>
         ACME Industries Ltd.
         <br />
