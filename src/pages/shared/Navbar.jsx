@@ -16,39 +16,52 @@ const Navbar = () => {
         })
     }
 
-    const links = <>
-        <NavLink 
-            to="/" 
-            className={({ isActive }) => 
-                `bg-white border px-2 rounded-xl flex items-center py-2 ${
-                    isActive ? 'bg-sky-100' : 'hover:bg-sky-100'
-                }`
-            }
-        >
-            <li>Home</li>
-        </NavLink>
-        <NavLink 
-            to='/myApplications'
-            className={({ isActive }) => 
-                `bg-white border px-2 rounded-xl flex items-center py-2 ${
-                    isActive ? 'bg-sky-100' : 'hover:bg-sky-100'
-                }`
-            }
-        >
-            <li>My application</li>
-        </NavLink>
-        <NavLink 
-            to='/addJob'
-            className={({ isActive }) => 
-                `bg-white border px-2 rounded-xl flex items-center py-2 ${
-                    isActive ? 'bg-sky-100' : 'hover:bg-sky-100'
-                }`
-            }
-        >
-            <li>Add job</li>
-        </NavLink>
-
-    </>
+    const links = (
+        <>
+            <NavLink
+                to="/"
+                end
+                className={({ isActive }) =>
+                    
+                    `bg-white border px-2 rounded-xl flex items-center py-2 ${
+                        isActive ? '!bg-sky-100' : 'hover:bg-sky-100'
+                    }`
+                }
+            >
+                Home
+            </NavLink>
+            <NavLink
+                to="/myApplications"
+                className={({ isActive }) =>
+                    `bg-white border px-2 rounded-xl flex items-center py-2 ${
+                        isActive ? '!bg-sky-100' : 'hover:bg-sky-100'
+                    }`
+                }
+            >
+                My Application
+            </NavLink>
+            <NavLink
+                to="/addJob"
+                className={({ isActive }) =>
+                    `bg-white border px-2 rounded-xl flex items-center py-2 ${
+                        isActive ? '!bg-sky-100' : 'hover:bg-sky-100'
+                    }`
+                }
+            >
+                Add Job
+            </NavLink>
+            <NavLink
+                to="/myJobPost"
+                className={({ isActive }) =>
+                    `bg-white border px-2 rounded-xl flex items-center py-2 ${
+                        isActive ? '!bg-sky-100' : 'hover:bg-sky-100'
+                    }`
+                }
+            >
+                My Post
+            </NavLink>
+        </>
+    );
     
     return (
         <div className="navbar bg-base-100">
@@ -80,7 +93,7 @@ const Navbar = () => {
             </div>
         </div>
         <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal px-1 flex gap-4 text-xl font-semibold">
+            <ul className="menu menu-horizontal px-1 flex gap-4 font-semibold">
                 {links}
             </ul>
         </div>
