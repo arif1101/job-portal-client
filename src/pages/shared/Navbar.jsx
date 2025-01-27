@@ -17,9 +17,36 @@ const Navbar = () => {
     }
 
     const links = <>
-        <NavLink ><li to='/' className='bg-white border px-2 rounded-full flex items-center shadow py-2'>Home</li></NavLink>
-        <NavLink to='/myApplications' ><li  className='bg-white border px-2 rounded-full flex items-center shadow py-2'>My Application</li></NavLink>
-        <NavLink ><li to='/' className='bg-white border px-2 rounded-full flex items-center shadow py-2'>Home</li></NavLink>
+        <NavLink 
+            to="/" 
+            className={({ isActive }) => 
+                `bg-white border px-2 rounded-xl flex items-center py-2 ${
+                    isActive ? 'bg-sky-100' : 'hover:bg-sky-100'
+                }`
+            }
+        >
+            <li>Home</li>
+        </NavLink>
+        <NavLink 
+            to='/myApplications'
+            className={({ isActive }) => 
+                `bg-white border px-2 rounded-xl flex items-center py-2 ${
+                    isActive ? 'bg-sky-100' : 'hover:bg-sky-100'
+                }`
+            }
+        >
+            <li>My application</li>
+        </NavLink>
+        <NavLink 
+            to='/addJob'
+            className={({ isActive }) => 
+                `bg-white border px-2 rounded-xl flex items-center py-2 ${
+                    isActive ? 'bg-sky-100' : 'hover:bg-sky-100'
+                }`
+            }
+        >
+            <li>Add job</li>
+        </NavLink>
 
     </>
     
