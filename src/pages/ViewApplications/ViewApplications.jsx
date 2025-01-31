@@ -35,7 +35,7 @@ const ViewApplications = () => {
     
     return (
         <div>
-            <h2 className="text-3xl">Applications for this job: {applications.length}</h2>
+            
             <div className="overflow-x-auto">
                 <table className="table">
                     {/* head */}

@@ -3,6 +3,7 @@ import React, { useContext } from 'react';
 import AuthContext from '../../context/AuthContext/AuthContext';
 import signinAnimation from "../../assets/lottie/signin.json"
 import { useLocation, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 const Signin = () => {
     const {signInUser} = useContext(AuthContext);
@@ -20,8 +21,18 @@ const Signin = () => {
 
         signInUser(email, password)
         .then(result => {
-            console.log('sign in ', result.user);
-            navigate(cardDetailsPath);
+            console.log('sign in ', result.user.email);
+            const user = {email: email}
+            
+            axios.post("http://localhost:5000/jwt", user, { withCredentials: true })
+            .then(res => {
+                console.log("JWT Response:", res.data);
+            })
+            .catch(error => {
+                console.error("JWT Request Error:", error);
+            });
+
+            // navigate(cardDetailsPath);
         })
         .catch(error => {
             console.log(error)
