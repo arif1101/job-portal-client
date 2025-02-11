@@ -6,7 +6,7 @@ import useAxios from '../../hooks/useAxios';
 const MyApplications = () => {
 
     const {user} = useAuth();
-    const [jobs, setJobs] = useState([]);
+    const [jobs, setJobs] = useState([]); 
     // console.log('from my application : ',jobs)
     const axiosSecure = useAxios()
     
